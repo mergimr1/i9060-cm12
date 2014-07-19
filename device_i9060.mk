@@ -15,10 +15,10 @@ PRODUCT_COPY_FILES += \
 	device/samsung/i9060/init.java_ss_baffinlite.rc:root/init.java_ss_baffinlite.rc \
 	device/samsung/i9060/init.bcm23550.usb.rc:root/init.bcm23550.usb.rc \
 	device/samsung/i9060/init.log.rc:root/init.log.rc \
-	device/samsung/i9060/init.recovery.java_ss_baffinlite.rc:root/init.recovery.capri_ss_baffin.rc \
+	device/samsung/i9060/init.recovery.java_ss_baffinlite.rc:root/init.recovery.java_ss_baffinlite.rc \
 	device/samsung/i9060/lpm.rc:root/lpm.rc \
-	device/samsung/i9060/ueventd.capri_ss_baffin.rc:root/ueventd.capri_ss_baffin.rc \
-	device/samsung/i9060/fstab.java_ss_baffinlite:root/fstab.capri_ss_baffin \
+	device/samsung/i9060/ueventd.java_ss_baffinlite.rc:root/ueventd.java_ss_baffinlite.rc \
+	device/samsung/i9060/fstab.java_ss_baffinlite:root/fstab.java_ss_baffin \
 
 PRODUCT_COPY_FILES += \
 	device/samsung/i9060/media_codecs.xml:system/etc/media_codecs.xml \
@@ -29,7 +29,7 @@ PRODUCT_COPY_FILES += \
 	device/samsung/i9060/bcm_keypad_v2.kl:system/usr/keylayout/bcm_keypad_v2.kl \
 	device/samsung/i9060/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
 	device/samsung/i9060/samsung-keypad.kl:system/usr/keylayout/samsung-keypad.kl \
-	device/samsung/i9060/sii9234_rcp.kl:system/usr/keylayout/sii9234_rcp.kl
+
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
@@ -43,7 +43,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	audio.a2dp.default \
 	audio.usb.default \
-	audio_policy.capri
+	audio_policy.java
 
 # Device-specific packages
 PRODUCT_PACKAGES += \

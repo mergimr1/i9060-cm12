@@ -60,6 +60,10 @@ BOARD_HAVE_SAMSUNG_WIFI := true
 # SkTextBox for libtvout
 BOARD_USES_SKTEXTBOX := true
 
+# Resolution
+TARGET_SCREEN_HEIGHT := 800
+TARGET_SCREEN_WIDTH := 480
+
 # Hardware rendering
 USE_OPENGL_RENDERER := true
 BOARD_EGL_CFG := device/samsung/i9060/egl.cfg
@@ -84,7 +88,7 @@ TARGET_RECOVERY_FSTAB := device/samsung/i9060/fstab.java_ss_baffinlite
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
 
 # healthd
-BOARD_HAL_STATIC_LIBRARIES := libhealthd.capri
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.java
 
 # CMHW
 BOARD_HARDWARE_CLASS := hardware/samsung/cmhw/ device/samsung/i9060/cmhw/
