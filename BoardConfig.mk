@@ -1,7 +1,7 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/samsung/i9060/BoardConfigVendor.mk
+-include vendor/samsung/baffinlite/BoardConfigVendor.mk
 
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
@@ -26,16 +26,21 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 4404019200
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_i9060_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/i9060
+TARGET_KERNEL_CONFIG := cyanogenmod_baffinlite_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/baffinlite
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
+
+#fix fr the graphic glitch 
+TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+BOARD_HAS_FLIPPED_SCREEN := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/i9060/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/i9060/libbt_vndcfg.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/baffinlite/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/baffinlite/libbt_vndcfg.txt
 
 # Connectivity - Wi-Fi
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
@@ -66,7 +71,7 @@ TARGET_SCREEN_WIDTH := 480
 
 # Hardware rendering
 USE_OPENGL_RENDERER := true
-BOARD_EGL_CFG := device/samsung/i9060/egl.cfg
+BOARD_EGL_CFG := device/samsung/baffinlite/egl.cfg
 BOARD_USE_MHEAP_SCREENSHOT := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
@@ -81,24 +86,24 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/samsung/i9060/ril/
+BOARD_RIL_CLASS := ../../../device/samsung/baffinlite/ril/
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/samsung/i9060/fstab.java_ss_baffinlite
+TARGET_RECOVERY_FSTAB := device/samsung/baffinlite/recovery.fstab
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
 
 # healthd
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.java
 
 # CMHW
-BOARD_HARDWARE_CLASS := hardware/samsung/cmhw/ device/samsung/i9060/cmhw/
+BOARD_HARDWARE_CLASS := hardware/samsung/cmhw/ device/samsung/baffinlite/cmhw/
 
 # GPS
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/i9060/include
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/baffinlite/include
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
-    device/samsung/i9060/sepolicy
+    device/samsung/baffinlite/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     file_contexts \
