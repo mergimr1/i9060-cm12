@@ -8,7 +8,7 @@
 /dev/block/mmcblk0p5  						/efs              	 ext4       noatime,nosuid,nodev,journal_async_commit,errors=panic wait,check
 /dev/block/mmcblk0p16 						/cache             	ext4       noatime,nosuid,nodev,journal_async_commit,errors=panic wait,check
 /dev/block/mmcblk0p19 						/data              	ext4       noatime,nosuid,nodev,discard,noauto_da_alloc,journal_async_commit,errors=panic    wait,check,encryptable=footer,length=-16384
-/dev/block/mmcblk1p1						/sdcard		   	vfat	 	auto							auto
+#/dev/block/mmcblk1p1						/sdcard		   	vfat	 	auto							auto
 
 # Recovery
 /dev/block/mmcblk0p9    					/boot              	 emmc      defaults                                              defaults
@@ -19,4 +19,6 @@
 #external sd card from vold.fstab
 #dev_mount sdcard /storage/sdcard auto 	/devices/platform/mmc_host/mmc2
 
-/devices/platform/sdhci.0/mmc_host/mmc2				/storage/extSdCard	auto	defaults						voldmanaged=sdcard1:auto
+/dev/block/mmcblk1p1				/storage/sdcard1	auto	defaults						voldmanaged=sdcard1:auto
+/dev/block/mmcblk1p1                            /external_sd        auto    defaults                                                voldmanaged=sdcard1:auto
+
