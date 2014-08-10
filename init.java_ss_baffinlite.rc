@@ -6,23 +6,6 @@ on early-init
     mkdir /efs 0771 radio system
 
 on init
-    # Videocore
-    chmod 0660 /proc/vc-dnfo
-    write /proc/vc-dnfo "width 480"
-    write /proc/vc-dnfo "height 800"
-    write /proc/vc-dnfo "scale 0"
-    write /proc/vc-dnfo "swidth 480"
-    write /proc/vc-dnfo "sheight 800"
-    write /proc/vc-dnfo "bpp 32"
-    write /proc/vc-dnfo "layer 1"
-    write /proc/vc-dnfo "xdpi 217.714"
-    write /proc/vc-dnfo "ydpi 207.347"
-    chmod 0660 /proc/vc-omx
-    write /proc/vc-omx "color 2"
-    setprop brcm.graphics.async_errors true
-    chmod 0660 /proc/vc-hnfo
-    write /proc/vc-hnfo "resolution 0"
-
     # See storage config details at http://source.android.com/tech/storage/
     mkdir /mnt/shell/emulated 0700 shell shell
     mkdir /storage/emulated 0555 root root
@@ -72,30 +55,6 @@ on post-fs-data
 # we will remap this as /storage/sdcard with the sdcard fuse tool
     mkdir /data/media 0770 media_rw media_rw
     chown media_rw media_rw /data/media
-
-    # for ASE application
-    mkdir /data/brcm
-    mkdir /data/brcm/ase
-    mkdir /data/brcm/ase/extras
-    mkdir /data/brcm/ase/scripts
-    chmod 0775 /data/brcm
-    chmod 0775 /data/brcm/ase
-    chmod 0775 /data/brcm/ase/extras
-    chmod 0775 /data/brcm/ase/scripts
-    mkdir /data/brcm/utils
-    chmod 0775 /data/brcm/utils
-
-    chmod 0660 /proc/vc
-    chmod 0660 /proc/vc/display
-    chmod 0660 /proc/vc/display/vchiq_control
-    write /proc/vc/display/vchiq_control "earlysuspctrl "
-    write /proc/vc/display/vchiq_control "autosuspend "
-
-    chown system system /sys/class/backlight/panel/brightness
-    chmod 0660 /sys/class/backlight/panel/brightness
-
-    chown system system /sys/class/backlight/touchkey-led/brightness
-    chmod 0660 /sys/class/backlight/touchkey-led/brightness
 
 # SA, System SW, SAMSUNG create log directory
     mkdir /data/log 0775 system log
@@ -652,12 +611,6 @@ service usb_portd /system/bin/usb_portd
 #    oneshot
     user system
     group input vpn net_admin net_raw radio system sdcard_rw log mount
-
-# Add VCLMK (Videocore Low Memory Killer) service
-service vclmk /system/bin/vclmk -s
-    class main
-    user system
-    group system root audio graphics
 
 # When the default SIM for data connections is updated,
 # also update the DUN AT channel with the default SIM.

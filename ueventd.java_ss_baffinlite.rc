@@ -1,27 +1,3 @@
-# vchiq
-/dev/vchiq                0666   system     system
-
-# videocore shared memory interface
-/dev/vcsm                 0666   system     system
-
-# display info
-/dev/vc-dnfo              0666   system     system
-
-# videocore memory access
-/dev/vc-mem               0666   system     system
-
-# videocore cma access
-/dev/vc-cma               0666   system     system
-
-# openmax configuration
-/dev/vc-omx               0666   system     system
-
-# videocore low memory killer
-/dev/vc-lmk               0644   system     system
-
-# videocore camera firmware
-/dev/vc-cam               0666   system     system
-
 /dev/pvrsrvkm             0666   system     system
 /dev/graphics/fb0         0666   system     graphics
 /dev/video0               0660   system     camera
