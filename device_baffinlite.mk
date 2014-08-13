@@ -30,6 +30,10 @@ PRODUCT_COPY_FILES += \
 	device/samsung/baffinlite/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
 	device/samsung/baffinlite/samsung-keypad.kl:system/usr/keylayout/samsung-keypad.kl \
 
+# recovery
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
+
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \

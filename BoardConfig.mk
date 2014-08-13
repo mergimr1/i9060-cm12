@@ -34,7 +34,20 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 #fix fr the graphic glitch 
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-BOARD_HAS_FLIPPED_SCREEN := true
+#BOARD_HAS_FLIPPED_SCREEN := true
+
+# TWRP
+DEVICE_RESOLUTION := 480x800
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := true
+HAVE_SELINUX := true
+TW_INCLUDE_JB_CRYPTO := true
+TW_NO_REBOOT_BOOTLOADER := true
+TW_HAS_DOWNLOAD_MODE := true
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -89,7 +102,8 @@ BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charg
 BOARD_RIL_CLASS := ../../../device/samsung/baffinlite/ril/
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/samsung/baffinlite/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/samsung/baffinlite/twrp.fstab
+TARGET_RECOVERY_INITRC := device/samsung/baffinlite/init.recovery.java_ss_baffinlite.rc
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
 
 # healthd

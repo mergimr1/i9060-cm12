@@ -3,6 +3,7 @@ on early-init
 
 on init
     export PATH /sbin:/vendor/bin:/system/sbin:/system/bin:/system/xbin
+    export LD_LIBRARY_PATH .:/sbin
     export ANDROID_ROOT /system
     export ANDROID_DATA /data
     export EXTERNAL_STORAGE /sdcard
@@ -51,6 +52,7 @@ on property:adb.recovery=1
     write /sys/class/android_usb/android0/bDeviceSubClass 0
     write /sys/class/android_usb/android0/bDeviceProtocol 0
     write /sys/class/android_usb/android0/enable 1
+    setprop service.adb.root 1
     start adbd
 
 # Restart adbd so it can run as root
