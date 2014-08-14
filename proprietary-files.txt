@@ -33,6 +33,7 @@ lib/hw/audio.usb.java.so
 lib/hw/gps.java.so
 lib/hw/sensors.java.so
 lib/libasound.so
+lib/libsavscmn.so
 lib/lib_Samsung_Resampler.so
 lib/lib_Samsung_SB_AM_for_ICS_v03008.so
 lib/lib_SamsungRec_V03011b.so
