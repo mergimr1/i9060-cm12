@@ -19,6 +19,7 @@ PRODUCT_COPY_FILES += \
 	device/samsung/baffinlite/lpm.rc:root/lpm.rc \
 	device/samsung/baffinlite/ueventd.java_ss_baffinlite.rc:root/ueventd.java_ss_baffinlite.rc \
 	device/samsung/baffinlite/recovery.fstab:root/recovery.fstab \
+	device/samsumg/baffinlite/fstab.java_ss_baffinlite:root/fstab.java_ss_baffinlite \
 
 PRODUCT_COPY_FILES += \
 	device/samsung/baffinlite/media_codecs.xml:system/etc/media_codecs.xml \
