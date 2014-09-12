@@ -30,6 +30,10 @@ PRODUCT_COPY_FILES += \
 	device/samsung/baffinlite/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
 	device/samsung/baffinlite/samsung-keypad.kl:system/usr/keylayout/samsung-keypad.kl \
 
+# Insecure ADBD
+ADDITIONAL_DEFAULT_PROPERTIES += \
+	ro.adb.secure=3 \
+	persist.sys.root_access=3
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
