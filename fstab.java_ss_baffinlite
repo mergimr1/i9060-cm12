@@ -1,4 +1,4 @@
-k# Android fstab file.
+# Android fstab file.
 #<src>                  <mnt_point>         <type>    <mnt_flags and options>                               <fs_mgr_flags>
 
 /dev/block/mmcblk0p17 		/system 	ext4 	ro,noatime 							wait
