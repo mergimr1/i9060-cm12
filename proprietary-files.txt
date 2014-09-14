@@ -65,8 +65,8 @@ lib/libsoundalive.so
 lib/libSoundAlive_VSP_ver315b_arm.so
 lib/libsoundspeed.so
 lib/libstagefrighthw.so
-system/lib/libjpeg_turbo.so
-system/lib/libaudiopolicy_sec.so
+lib/libjpeg_turbo.so
+lib/libaudiopolicy_sec.so
 lib/libsthmb.so
 lib/libuecodec.so
 lib/libusb_config.so
