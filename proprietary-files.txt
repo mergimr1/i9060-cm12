@@ -109,7 +109,6 @@ lib/drm/libplayreadyplugin.so
 lib/hw/acoustics.default.so
 lib/hw/audio_policy.java.so
 lib/hw/audio.primary.goldfish.so
-lib/hw/audio.r_submix.default.so
 lib/hw/audio.tms.default.so
 lib/hw/bplus.default.so
 lib/hw/camera.goldfish.so
