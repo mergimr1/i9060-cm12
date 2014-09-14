@@ -10,9 +10,8 @@
 /dev/block/mmcblk0p13 		/modem 		emmc 	defaults 					defaults
 /dev/block/mmcblk0p18 		/preload 	ext4 	defaults 					defaults
 
-#sdcard
-/dev/block/mmcblk1p1 		/external_sd auto 	defaults 					defaults
-/dev/block/mmcblk1p2 		/sd-ext 	auto 	defaults 					defaults
+# Vold
+/devices/platform/sdhci.0/mmc_host/mmc2 auto    auto  defaults                                              voldmanaged=sdcard1:auto
 
 #/devices/platform/sdhci.1/mmc_host/mmc0/mmc0:0001/block/mmcblk0 	auto 	auto 	defaults noemulatedsd,nonremovable,voldmanaged=sdcard0:auto
 #/devices/platform/dwc_otg/usb1			auto 		auto 	defaults 			voldmanaged=usbdisk:auto
