@@ -1,4 +1,4 @@
-k#   <src>                 	<mnt_point>	<type> 	<mnt_flags and options> 	<fs_mgr_flags>
+#   <src>                 	<mnt_point>	<type> 	<mnt_flags and options> 	<fs_mgr_flags>
 
 /dev/block/mmcblk0p17 		/system 	ext4 	ro,noatime 					wait
 /dev/block/mmcblk0p5 		/efs 		ext4 	noatime,nosuid,nodev,errors=panic 			wait,check
