@@ -47,7 +47,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	audio.a2dp.default \
 	audio.usb.default \
-	audio_policy.java
+	audio_policy.java \
+	audio.r_submix.default
 
 # Device-specific packages
 PRODUCT_PACKAGES += \
