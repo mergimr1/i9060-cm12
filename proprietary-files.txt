@@ -15,6 +15,7 @@ bin/rild
 bin/mfgloader
 bin/usb_portd
 bin/wlandutservice
+etc/asound.conf
 etc/audio_policy.conf
 etc/usb_portd.conf
 etc/DiamondVoice_Filter_NB.txt
