@@ -37,7 +37,11 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
-	setup_fs
+	setup_fs \
+	e2fsck \
+	mkfs.f2fs \
+	fsck.f2fs \
+	fibmap.f2fs
 
 # Usb accessory
 PRODUCT_PACKAGES += \
