@@ -113,9 +113,6 @@ lib/drm/libdrmwvmplugin.so
 lib/drm/libomaplugin.so
 lib/drm/libplayreadyplugin.so
 lib/hw/acoustics.default.so
-lib/hw/audio_policy.java.so
-lib/hw/audio.primary.goldfish.so
-lib/hw/audio.tms.default.so
 lib/hw/bplus.default.so
 lib/hw/camera.goldfish.so
 lib/hw/gps.goldfish.so
