@@ -105,7 +105,6 @@ BOARD_RIL_CLASS := ../../../device/samsung/baffinlite/ril/
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/baffinlite/twrp.fstab
-TARGET_RECOVERY_INITRC := device/samsung/baffinlite/init.recovery.java_ss_baffinlite.rc
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
 
 # healthd

@@ -1,24 +1,15 @@
-# Android fstab file.
-#<src>                  					<mnt_point>        	 <type>    <mnt_flags and options>                               <fs_mgr_flags>
-# The filesystem that contains the filesystem checker binary (typically /system) cannot
-# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
-# data partition must be located at the bottom for supporting device encryption
+#   <src>                 	<mnt_point>	<type> 	<mnt_flags and options> 	<fs_mgr_flags>
 
-/dev/block/mmcblk0p17 						/system           	 ext4       ro,noatime                                            wait
-/dev/block/mmcblk0p5  						/efs              	 ext4       noatime,nosuid,nodev,journal_async_commit,errors=panic wait,check
-/dev/block/mmcblk0p16 						/cache             	ext4       noatime,nosuid,nodev,journal_async_commit,errors=panic wait,check
-/dev/block/mmcblk0p19 						/data              	ext4       noatime,nosuid,nodev,discard,noauto_da_alloc,journal_async_commit,errors=panic    wait,check,encryptable=footer,length=-16384
-#/dev/block/mmcblk1p1						/sdcard		   	vfat	 	auto							auto
+/dev/block/mmcblk0p17 		/system 	ext4 	ro,noatime 					wait
+/dev/block/mmcblk0p5 		/efs 		ext4 	noatime,nosuid,nodev,errors=panic 			wait,check
+/dev/block/mmcblk0p16 		/cache 		ext4 	noatime,nosuid,nodev,barrier=1,data=ordered,errors=panic 	wait,check
+/dev/block/mmcblk0p19 		/data 		ext4 	noatime,nosuid,nodev,barrier=1,data=ordered,errors=panic	wait,encryptable=footer,length=-16384
 
-# Recovery
-/dev/block/mmcblk0p9    					/boot              	 emmc      defaults                                              defaults
-/dev/block/mmcblk0p10  						/recovery          	 emmc      defaults                                              defaults
-/dev/block/mmcblk0p13  	 					/modem              	emmc      defaults                                              defaults
-/dev/block/mmcblk0p18   					/preload            	ext4      defaults                                              recoveryonly
-	
-#external sd card from vold.fstab
-#dev_mount sdcard /storage/sdcard auto 	/devices/platform/mmc_host/mmc2
+/dev/block/mmcblk0p9 		/boot 		emmc 	defaults 					defaults
+/dev/block/mmcblk0p10 		/recovery 	emmc 	defaults 					defaults
+/dev/block/mmcblk0p13 		/modem 		emmc 	defaults 					defaults
+/dev/block/mmcblk0p18 		/preload 	ext4 	defaults 					defaults
 
-/dev/block/mmcblk1p1				/storage/sdcard1	auto	defaults						voldmanaged=sdcard1:auto
-/dev/block/mmcblk1p1                            /external_sd        auto    defaults                                                voldmanaged=sdcard1:auto
-
+# Vold
+/devices/platform/sdhci.0/mmc_host/mmc2 auto    auto  defaults                                              voldmanaged=sdcard1:auto
+/devices/platform/sdhci.2/mmc_host/mmc1 auto    auto  defaults                                              voldmanaged=usbdisk0:auto
