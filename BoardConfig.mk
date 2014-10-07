@@ -44,7 +44,6 @@ HAVE_SELINUX := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 TW_INCLUDE_JB_CRYPTO := true
 TW_NO_REBOOT_BOOTLOADER := true
-TW_HAS_DOWNLOAD_MODE := true
 #TW_ALWAYS_RMRF := true
 TW_INTERNAL_STORAGE_PATH := "/data/media"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
@@ -104,7 +103,7 @@ BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charg
 BOARD_RIL_CLASS := ../../../device/samsung/baffinlite/ril/
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/samsung/baffinlite/twrp.fstab
+TARGET_RECOVERY_FSTAB := device/samsung/baffinlite/fstab.java_ss_baffinlite
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
 
 # healthd
