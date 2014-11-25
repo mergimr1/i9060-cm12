@@ -33,10 +33,6 @@ PRODUCT_COPY_FILES += \
 	device/samsung/baffinlite/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
 	device/samsung/baffinlite/samsung-keypad.kl:system/usr/keylayout/samsung-keypad.kl \
 
-# Copy MultiSIM Toggle app
-PRODUCT_COPY_FILES += \
-        device/samsung/baffinlite/MultiSIM-Toggle.apk:system/app/MultiSIM-Toggle.apk \
-
 # Insecure ADBD
 ADDITIONAL_DEFAULT_PROPERTIES += \
 	ro.adb.secure=3 \
