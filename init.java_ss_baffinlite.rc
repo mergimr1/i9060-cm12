@@ -471,12 +471,6 @@ service setup_fs /system/bin/setup_fs \
     group root
     oneshot
 
-#at_distributor for making file for factory.
-service at_distributor /system/bin/at_distributor
-	class main
-	user root
-	group radio misc log
-
 # RILD
 service java-ril-daemon /system/bin/rild
     class main
@@ -597,14 +591,6 @@ service gpsd /system/bin/glgps -c /system/etc/gps/glconfig.xml
     class late_start
     user gps
     group system root inet radio wifi sdcard_rw
-
-# Run ATX over UART
-service console /system/bin/atx -l -d
-    class main
-    console
-#    oneshot
-    user system
-    group vpn net_admin net_raw radio system sdcard_rw log mount
 
 # Kexec enable
 service kexec /system/kexec/kexec.sh
