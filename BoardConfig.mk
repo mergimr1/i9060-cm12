@@ -123,6 +123,9 @@ TARGET_SPECIFIC_HEADER_PATH := device/samsung/baffinlite/include
 # Compat
 TARGET_USES_LOGD := false
 
+# jemalloc causes a lot of random crash on free()
+MALLOC_IMPL := dlmalloc
+
 # SELinux
 BOARD_SEPOLICY_DIRS += \
     device/samsung/baffinlite/sepolicy
