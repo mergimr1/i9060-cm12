@@ -41,6 +41,7 @@ lib/lib_Samsung_Resampler.so
 lib/lib_Samsung_SB_AM_for_ICS_v03008.so
 lib/lib_SamsungRec_V03011b.so
 lib/lib_SoundAlive_V01013q.so
+lib/libat.so
 lib/libatparser.so
 lib/libomission_avoidance.so
 lib/libfactoryutil.so
