@@ -16,7 +16,6 @@ PRODUCT_COPY_FILES += \
 	device/samsung/baffinlite/init.bcm23550.usb.rc:root/init.bcm23550.usb.rc \
 	device/samsung/baffinlite/init.log.rc:root/init.log.rc \
 	device/samsung/baffinlite/init.recovery.java_ss_baffinlite.rc:root/init.recovery.java_ss_baffinlite.rc \
-	device/samsung/baffinlite/lpm.rc:root/lpm.rc \
 	device/samsung/baffinlite/ueventd.java_ss_baffinlite.rc:root/ueventd.java_ss_baffinlite.rc \
 	device/samsung/baffinlite/fstab.java_ss_baffinlite:root/fstab.java_ss_baffinlite \
 
@@ -67,7 +66,6 @@ PRODUCT_PACKAGES += \
 
 # Charger
 PRODUCT_PACKAGES += \
-	charger \
 	charger_res_images
 
 # Wi-Fi

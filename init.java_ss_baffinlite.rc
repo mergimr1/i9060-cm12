@@ -341,6 +341,18 @@ service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard1
 
 # SEC_PRODUCT_FEATURE_COMMON_USE_MULTISIM
     setprop ro.multisim.simslotcount 2
+
+on charger
+    # set cpu governor to powersave while in charging mode
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor powersave
+    # EHCI runtime enable for LPA
+    write /sys/devices/platform/s5p-ehci/power/control auto
+
+    chmod 0660 /proc/vc
+    chmod 0660 /proc/vc/display
+    chmod 0660 /proc/vc/display/vchiq_control
+    write /proc/vc/display/vchiq_control "earlysuspctrl "
+    write /proc/vc/display/vchiq_control "autosuspend "
     
 on fs
     mount_all /fstab.java_ss_baffinlite
@@ -480,6 +492,11 @@ service java-ril-daemon /system/bin/rild
     user root
     group radio cache inet misc audio system sdcard_rw log sdcard_r
 #    onrestart restart cpboot-daemon
+
+service charger /sbin/healthd -c
+    class charger
+    critical
+    seclabel u:r:healthd:s0
 
 # create virtual SD card at /mnt/sdcard, based on the /data/media directory
 # daemon will drop to user/group system/media_rw after initializing
