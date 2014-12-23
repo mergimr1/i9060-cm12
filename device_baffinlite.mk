@@ -23,6 +23,7 @@ PRODUCT_COPY_FILES += \
 	frameworks/av/media/libstagefright/data/media_codecs_ffmpeg.xml:system/etc/media_codecs_ffmpeg.xml \
 	device/samsung/baffinlite/media_profiles.xml:system/etc/media_profiles.xml \
 	device/samsung/baffinlite/media_codecs.xml:system/etc/media_codecs.xml \
+	device/samsung/baffinlite/audio_policy.conf:system/etc/audio_policy.conf \
 
 # Prebuilt kl keymaps
 PRODUCT_COPY_FILES += \
