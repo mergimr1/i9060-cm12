@@ -9,28 +9,28 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/baffinlite/overlay
 
 # Init files
 PRODUCT_COPY_FILES += \
-	device/samsung/baffinlite/init.java_ss_baffinlite.rc:root/init.java_ss_baffinlite.rc \
-	device/samsung/baffinlite/init.bcm23550.usb.rc:root/init.bcm23550.usb.rc \
-	device/samsung/baffinlite/init.log.rc:root/init.log.rc \
-	device/samsung/baffinlite/init.recovery.java_ss_baffinlite.rc:root/init.recovery.java_ss_baffinlite.rc \
-	device/samsung/baffinlite/ueventd.java_ss_baffinlite.rc:root/ueventd.java_ss_baffinlite.rc \
-	device/samsung/baffinlite/fstab.java_ss_baffinlite:root/fstab.java_ss_baffinlite \
+	device/samsung/baffinlite/rootdir/init.java_ss_baffinlite.rc:root/init.java_ss_baffinlite.rc \
+	device/samsung/baffinlite/rootdir/init.bcm23550.usb.rc:root/init.bcm23550.usb.rc \
+	device/samsung/baffinlite/rootdir/init.log.rc:root/init.log.rc \
+	device/samsung/baffinlite/rootdir/init.recovery.java_ss_baffinlite.rc:root/init.recovery.java_ss_baffinlite.rc \
+	device/samsung/baffinlite/rootdir/ueventd.java_ss_baffinlite.rc:root/ueventd.java_ss_baffinlite.rc \
+	device/samsung/baffinlite/rootdir/fstab.java_ss_baffinlite:root/fstab.java_ss_baffinlite \
 
 PRODUCT_COPY_FILES += \
 	frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
 	frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
 	frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
 	frameworks/av/media/libstagefright/data/media_codecs_ffmpeg.xml:system/etc/media_codecs_ffmpeg.xml \
-	device/samsung/baffinlite/media_profiles.xml:system/etc/media_profiles.xml \
-	device/samsung/baffinlite/media_codecs.xml:system/etc/media_codecs.xml \
-	device/samsung/baffinlite/audio_policy.conf:system/etc/audio_policy.conf \
+	device/samsung/baffinlite/configs/media_profiles.xml:system/etc/media_profiles.xml \
+	device/samsung/baffinlite/configs/media_codecs.xml:system/etc/media_codecs.xml \
+	device/samsung/baffinlite/configs/audio_policy.conf:system/etc/audio_policy.conf \
 
 # Prebuilt kl keymaps
 PRODUCT_COPY_FILES += \
-	device/samsung/baffinlite/bcm_headset.kl:system/usr/keylayout/bcm_headset.kl \
-	device/samsung/baffinlite/bcm_keypad_v2.kl:system/usr/keylayout/bcm_keypad_v2.kl \
-	device/samsung/baffinlite/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-	device/samsung/baffinlite/samsung-keypad.kl:system/usr/keylayout/samsung-keypad.kl \
+	device/samsung/baffinlite/keylayouts/bcm_headset.kl:system/usr/keylayout/bcm_headset.kl \
+	device/samsung/baffinlite/keylayouts/bcm_keypad_v2.kl:system/usr/keylayout/bcm_keypad_v2.kl \
+	device/samsung/baffinlite/keylayouts/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+	device/samsung/baffinlite/keylayouts/samsung-keypad.kl:system/usr/keylayout/samsung-keypad.kl \
 
 # Insecure ADBD
 ADDITIONAL_DEFAULT_PROPERTIES += \
